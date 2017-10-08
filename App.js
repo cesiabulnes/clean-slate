@@ -3,7 +3,7 @@ import Button from "apsl-react-native-button";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { StackNavigator } from 'react-navigation';
 import {Router, Stack, Scene, Actions} from 'react-native-router-flux';
-import {SecondScreen, DrawingPage } from './screens';
+import {SecondScreen, DrawingPageSad,DrawingPageHappy,DrawingPageAngery } from './screens';
 
 class HomeScreen extends React.Component {
 
@@ -96,7 +96,9 @@ const App = () => (
       <Stack key="root">
         <Scene key="home" component={HomeScreen} initial={true} title="Home"/>
         <Scene key="second" component={SecondScreen} title="Want To Feel"/>
-        <Scene key="drawing" component={DrawingPage} title="Drawing Page"/>
+        <Scene key="drawingSad" component={DrawingPageSad} title="Drawing Page-Sad"/>
+        <Scene key="drawingHappy" component={DrawingPageHappy} title="Drawing Page-Happy"/>
+         <Scene key="drawingAngery" component={DrawingPageAngery} title="Drawing Page-Angery"/>
         {/* <Scene key="home" component={Home}/> */}
       </Stack>
     </Router>

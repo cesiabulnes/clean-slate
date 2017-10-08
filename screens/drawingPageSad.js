@@ -8,9 +8,14 @@ import { ImagePicker, Constants, Svg } from 'expo';
 import SvgUri from 'react-native-svg-uri';
 
 
-export default class DrawingPage extends Component {
+export default class DrawingPageSad extends Component {
+  colors = ['#4B7292', '#6397CD', '#4B7292', '#d0021B', '#D7B699', '#d0021B', '#6397CD', '#D7B699', 
+'#D7B699', '#6397CD', '#d0021B', '#6397CD', '#6397CD'];
+  stroke = ["green", "brown", "blue", "#576a2e"];
+
   state = {
     image: null,
+    currentColor: 0
   };
 
   render() {
@@ -41,14 +46,21 @@ export default class DrawingPage extends Component {
           />
         </Svg> */}
 
-        <SvgUri 
-          width="300"
-          height="300"
-          source={{uri:'http://127.0.0.1:8125/test.svg'}}
-    />
-
-
-
+    <Button
+          style={{ borderWidth: 0, height: 300 }}
+          onPress={() =>
+            this.setState((prevState, _) => ({
+              currentColor: (prevState.currentColor + 1) % this.colors.length
+            }))}
+        >
+          <SvgUri
+            width="300"
+            height="300"
+            fill={this.colors[this.state.currentColor]}
+            stroke={this.stroke[this.state.currentColor]}
+            source={{ uri: "http://fe521db0.ngrok.io/test.svg" }}
+          />
+        </Button>
   
 
         <Button

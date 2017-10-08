@@ -1,7 +1,12 @@
 import SecondScreen from './secondScreen';
-import DrawingPage from './drawingPage';
+import DrawingPageSad from './drawingPageSad';
+import DrawingPageHappy from './drawingPageHappy';
+import DrawingPageAngery from './drawingPageAngery';
 
 export {
 	SecondScreen,
-	DrawingPage
+	DrawingPageSad,
+	DrawingPageHappy,
+	DrawingPageAngery
+
 };

@@ -4,7 +4,9 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
 import {Router, Stack, Scene, Actions} from 'react-native-router-flux';
-import DrawingPage from './drawingPage';
+import DrawingPageSad from './drawingPageSad';
+import DrawingPageHappy from './drawingPageHappy';
+import DrawingPageAngery from './drawingPageAngery';
 
 export default class SecondScreen extends React.Component {
     render() {
@@ -19,21 +21,21 @@ export default class SecondScreen extends React.Component {
                     </View>
                     <View style={styles.actionsContainer}>
                         <Button
-                          onPress = { () => Actions.drawing() }
+                          onPress = { () => Actions.drawingSad() }
                           style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
                           textStyle={{ fontSize: 24}}
                         >
                                     Sad 😢
                                 </Button>
                         <Button
-                          onPress = { () => Actions.drawing() }
+                          onPress = { () => Actions.drawingHappy() }
                           style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
                           textStyle={{ fontSize: 24 }}
                         >
                           Happy 😊
                         </Button>
                         <Button
-                          onPress = { () => Actions.drawing() }
+                          onPress = { () => Actions.drawingAngery() }
                           style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
                           textStyle={{ fontSize: 24 }}
                         >
