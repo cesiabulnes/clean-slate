@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'apsl-react-native-button'
 import { StyleSheet, Text, View } from 'react-native';
 //import { Button } from 'react-native-elements';
 
@@ -12,11 +13,16 @@ export default class App extends React.Component {
 				How are You Feeling Today?
 				</Text>
 				</View>
-				{/* // <Button 
-
-
-					// </Button>
-					// */}			 
+				<Button style={{backgroundColor: 'red'}} textStyle={{fontSize: 18}}>
+			 Angery
+		  </Button>	 
+		 <Button style={{backgroundColor: '#128bbc'}} textStyle={{fontSize: 18}}>
+		  Saddddd
+		 </Button> 
+		<Button style={{backgroundColor: 'yellow'}} textStyle={{fontSize: 18}}>
+		   Happy
+		   </Button>
+	   			
 				</View>
 			   );
 	}
@@ -31,12 +37,13 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontFamily: 'Helvetica',
-		fontSize: 40,
+		alignItems:'center',
+		justifyContent:'flex-start',
+		fontSize: 20,
 	},
 
-	/*
-	//	someButtonStyle1:{
-	//		color:'blue',
-	//	},*/
+	someButtonStyle1:{
+		color:'blue',
+		},
 
 });
