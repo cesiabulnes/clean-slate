@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'apsl-react-native-button'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
 import {Router, Stack, Scene, Actions} from 'react-native-router-flux';
@@ -9,29 +9,38 @@ import DrawingPage from './drawingPage';
 export default class SecondScreen extends React.Component {
     render() {
         return ( 
-            <View style = { styles.container } >
-            <View style = { styles.title } >
-            <Text style = { styles.title } >
-                How Do You want to FeelToday ?
-            </Text> 
-            </View> 
-                <Button style = {{ backgroundColor: 'red' } }
-                    textStyle = {{ fontSize: 18 } } 
-                    onPress = { () => Actions.drawing() }>
-                    Angery 
-                </Button>     
-                <Button style = {{ backgroundColor: '#128bbc' } }
-                    textStyle = {{ fontSize: 18 } }
-                    onPress = { () => Actions.drawing() } >
-                    Saddddd 
-                </Button>  
-                <Button 
-                    style = {{ backgroundColor: 'yellow' } }
-                    textStyle = {{ fontSize: 18 } }
-                    onPress = { () => Actions.drawing() } >
-                    Happy 
-                </Button> 
-            </View>
+            <View style={styles.container}>
+                    <Image source={{uri: 'https://i.imgur.com/AIeJqA8.jpg'}}
+                        style={styles.backgroundimage} />
+                    <View style={styles.title}>
+                        <Image source={{uri: 'https://i.imgur.com/ZePMWl7.png'}}
+                            style={styles.logo} />
+                      <Text style={styles.title}>How do you want to feel?</Text>
+                    </View>
+                    <View style={styles.actionsContainer}>
+                        <Button
+                          onPress = { () => Actions.drawing() }
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24}}
+                        >
+                                    Sad 😢
+                                </Button>
+                        <Button
+                          onPress = { () => Actions.drawing() }
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24 }}
+                        >
+                          Happy 😊
+                        </Button>
+                        <Button
+                          onPress = { () => Actions.drawing() }
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24 }}
+                        >
+                          Angery 😡
+                        </Button>
+                    </View>
+                </View>
         )
     }
 
@@ -44,21 +53,42 @@ export default class SecondScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#68c3e8',
-        alignItems: 'center',
-        justifyContent: 'center',
+   container: {
+    flex: 1,
+    backgroundColor: "transparent",
+    alignItems: "center",
+  },
+  title: {
+    fontFamily: "Helvetica Neue",
+    alignItems: "center",
+    justifyContent: "flex-start",
+        marginBottom: 10,
+    fontSize: 20,
+        color: '#555555'
+  },
+    actionsContainer: {
+        backgroundColor: 'transparent',
+        width: 300,
+        paddingTop: 30,
+        paddingBottom: 15,
+        paddingHorizontal: 40,
+        borderRadius: 22,
     },
-    title: {
-        fontFamily: 'Helvetica',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        fontSize: 20,
+    backgroundimage:{
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        opacity: 0.71
+    },
+    logo:{
+        width: 300,
+        height: 58,
+        marginTop: 30,
+        marginBottom: 50
     },
 
-    someButtonStyle1: {
-        color: 'blue',
-    },
-
+  someButtonStyle1: {
+    color: "blue"
+  }
 });
+

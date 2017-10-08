@@ -25,24 +25,24 @@ class HomeScreen extends React.Component {
                     <View style={styles.actionsContainer}>
                         <Button
                           onPress = { () => Actions.second() }
-                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-                          textStyle={{ fontSize: 24}}
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24, color: "#555555"}}
                         >
                                     Sad 😢
                                 </Button>
                         <Button
                           onPress = { () => Actions.second() }
-                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-                          textStyle={{ fontSize: 24 }}
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24, color: "#555555"}}
                         >
                           Happy 😊
                         </Button>
                         <Button
                           onPress = { () => Actions.second() }
-                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-                          textStyle={{ fontSize: 24 }}
+                          style={{ backgroundColor: "#E4FFFE", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24, color: "#555555"}}
                         >
-                          Angry 😡
+                          Angery 😡
                         </Button>
                     </View>
                 </View>
@@ -52,7 +52,7 @@ class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
     flex: 1,
     backgroundColor: "transparent",
     alignItems: "center",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         color: '#555555'
   },
     actionsContainer: {
-        backgroundColor: '#fafafa',
+        backgroundColor: 'transparent',
         width: 300,
         paddingTop: 30,
         paddingBottom: 15,
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
         marginBottom: 50
     },
+
   someButtonStyle1: {
     color: "blue"
   }
