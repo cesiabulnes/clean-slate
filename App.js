@@ -13,45 +13,42 @@ class HomeScreen extends React.Component {
     // };
 
     render() {
-return (
-      <View style={styles.container}>
-                <Image source={{uri: 'https://i.imgur.com/AIeJqA8.jpg'}}
-                            style={styles.backgroundimage} />
-        <View style={styles.title}>
-                    <Image source={{uri: 'https://i.imgur.com/ZePMWl7.png'}}
+        return (
+                <View style={styles.container}>
+                    <Image source={{uri: 'https://i.imgur.com/AIeJqA8.jpg'}}
+                        style={styles.backgroundimage} />
+                    <View style={styles.title}>
+                        <Image source={{uri: 'https://i.imgur.com/ZePMWl7.png'}}
                             style={styles.logo} />
-          <Text style={styles.title}>How are you feeling?</Text>
-        </View>
-                <View style={styles.actionsContainer}>
-            <Button
-              onPress = { () => Actions.second() }
-              style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-              textStyle={{ fontSize: 24}}
-            >
-                        Sad 😢
-                    </Button>
-            <Button
-              onPress = { () => Actions.second() }
-              style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-              textStyle={{ fontSize: 24 }}
-            >
-              Happy 😊
-            </Button>
-            <Button
-              onPress = { () => Actions.second() }
-              style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
-              textStyle={{ fontSize: 24 }}
-            >
-              Angry 😡
-            </Button>
+                      <Text style={styles.title}>How are you feeling?</Text>
+                    </View>
+                    <View style={styles.actionsContainer}>
+                        <Button
+                          onPress = { () => Actions.second() }
+                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24}}
+                        >
+                                    Sad 😢
+                                </Button>
+                        <Button
+                          onPress = { () => Actions.second() }
+                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24 }}
+                        >
+                          Happy 😊
+                        </Button>
+                        <Button
+                          onPress = { () => Actions.second() }
+                          style={{ backgroundColor: "rgba(0,0,200,.2)", borderWidth: 0, marginBottom: 20 }}
+                          textStyle={{ fontSize: 24 }}
+                        >
+                          Angry 😡
+                        </Button>
+                    </View>
                 </View>
-      </View>
     );
     
-
-    _handlePress = () => {
-        this.props.navigation.navigate('Home');
-    }
+}
 }
 
 const styles = StyleSheet.create({
@@ -103,4 +100,6 @@ const App = () => (
       </Stack>
     </Router>
   );
+
+export default App
 
