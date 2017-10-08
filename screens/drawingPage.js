@@ -4,11 +4,8 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 //import { Button } from 'react-native-elements';
 import { StackNavigator, } from 'react-navigation';
 import {Router, Stack, Scene, Actions} from 'react-native-router-flux';
-
 import { ImagePicker, Constants, Svg } from 'expo';
-
-
-
+import SvgUri from 'react-native-svg-uri';
 
 
 export default class DrawingPage extends Component {
@@ -21,8 +18,9 @@ export default class DrawingPage extends Component {
 
     return (
 
-      <View style={styles.container}>
-        <Svg height={100} width={100}>
+      <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+
+        {/* <Svg height={100} width={100}>
           <Svg.Circle
             cx={50}
             cy={50}
@@ -41,7 +39,15 @@ export default class DrawingPage extends Component {
             fill={this.state.rectangleColor}
             onPress={() => this.setState({rectangleColor: "tomato"})}
           />
-        </Svg>
+        </Svg> */}
+
+        <SvgUri 
+          width="300"
+          height="300"
+          source={{uri:'http://127.0.0.1:8125/test.svg'}}
+    />
+
+
 
   
 
