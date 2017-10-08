@@ -1,5 +1,7 @@
 import SecondScreen from './secondScreen';
+import DrawingPage from './drawingPage';
 
 export {
-	SecondScreen
+	SecondScreen,
+	DrawingPage
 };
